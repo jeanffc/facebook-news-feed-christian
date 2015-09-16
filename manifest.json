@@ -1,0 +1,27 @@
+{
+	"name": "Facebook News Feed Christian",
+	"version": "0.1.2",
+	"description": "Esta perdendo muito tempo no Facebook? News Feed Christian substitui o seu feed de notícias com citações cristãs para te motivar.",
+	"manifest_version": 2,
+	"permissions": [
+		"http://www.facebook.com/*",
+		"https://www.facebook.com/*"
+	],
+	"icons":
+	{ "16": "icon16.png", 
+	  "48": "icon48.png", 
+	  "128": "icon128.png" },
+	"content_scripts": [
+		{
+			"matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+			"js": ["jquery.js", "nfc.js"],
+			"css": ["nfc.css"],
+			"run_at": "document_idle"
+		}
+	],
+    "web_accessible_resources": [
+        "info-panel.html",
+        "taiko_tiny.png",
+        "taiko_bigger.png"
+        ]
+}
